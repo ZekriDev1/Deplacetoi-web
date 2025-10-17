@@ -1,1 +1,247 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Déplace Toi — Move Smarter. Arrive Happier.</title>
+  <meta name="description" content="Déplace Toi — modern ride-sharing. Fast, safe, smart travel." />
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Glassy, responsive navbar -->
+  <header class="nav-wrap" id="site-header">
+    <nav class="navbar container">
+      <div class="brand">
+        <!-- Logo text with pink accent -->
+        <a href="#" class="logo">Déplace<span>Toi</span></a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how" class="nav-link">How It Works</a></li>
+        <li><a href="#download" class="nav-link">Download</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-cta" id="getAppBtn">Get the App</button>
 
+      <!-- Mobile hamburger -->
+      <button id="mobileToggle" class="mobile-toggle" aria-label="Toggle menu">
+        <span class="hamb"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <!-- Parallax layers for depth (JS will move) -->
+      <div class="hero-bg">
+        <div class="layer layer--back"></div>
+        <div class="layer layer--mid"></div>
+        <div class="layer layer--front"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1 class="headline">Move Smarter. <span class="accent">Arrive Happier.</span></h1>
+          <p class="sub">The modern ride-sharing app for fast, safe, and smart travel.</p>
+          <div class="cta-row">
+            <a href="#download" class="btn primary" id="ctaGetApp">Get the App</a>
+            <a href="#beDriver" class="btn outline">Become a Driver</a>
+          </div>
+
+          <!-- Quick feature badges -->
+          <div class="badges">
+            <div class="badge">Fast</div>
+            <div class="badge">Safe</div>
+            <div class="badge">Cashless</div>
+          </div>
+        </div>
+
+        <!-- Right: animated 3D phone mockup built with CSS transforms -->
+        <div class="hero-right" id="heroPhoneWrap" aria-hidden="true">
+          <!-- shadow + floating -->
+          <div class="phone-shadow"></div>
+          <div class="phone" id="phone">
+            <!-- Phone screen with rotating app cards (CSS animation) -->
+            <div class="screen">
+              <div class="ui-cards">
+                <article class="card card--active">
+                  <h3>Ride to City Center</h3>
+                  <p>2 min away • 4.7 ★</p>
+                </article>
+                <article class="card">
+                  <h3>30% off — Weekend</h3>
+                  <p>Apply promo at checkout</p>
+                </article>
+                <article class="card">
+                  <h3>Trusted drivers</h3>
+                  <p>Background checks & safety</p>
+                </article>
+              </div>
+            </div>
+
+            <!-- decorative outlines to make it 3D -->
+            <div class="phone-frame"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- subtle scroll hint -->
+      <a href="#features" class="scroll-hint" aria-hidden="true">
+        <span class="mouse"></span>
+        <span class="hint-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features container">
+      <h2 class="section-title">Features</h2>
+      <p class="section-sub">Thoughtful features built for daily travel.</p>
+
+      <div class="features-grid">
+        <!-- Each card uses glassmorphism and 3D tilt on hover -->
+        <div class="feature-card" data-feature>
+          <!-- inline SVG icon -->
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 11h12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Live Tracking</h3>
+          <p>Realtime ETA and driver location with map preview.</p>
+        </div>
+
+        <div class="feature-card" data-feature>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 10h18" stroke="currentColor" stroke-linecap="round"/><path d="M12 3v18" stroke="currentColor" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Cashless Payments</h3>
+          <p>Cards, wallets or in-app payment — secure & fast.</p>
+        </div>
+
+        <div class="feature-card" data-feature>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3" stroke="currentColor"/><path d="M5 20c1.5-3 4.5-5 7-5s5.5 2 7 5" stroke="currentColor"/></svg>
+          </div>
+          <h3>Trusted Drivers</h3>
+          <p>Background checks and in-app ratings for peace of mind.</p>
+        </div>
+
+        <div class="feature-card" data-feature>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h7l3 8 4-16 4 12" stroke="currentColor" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Fast Pickup</h3>
+          <p>Smart matching and route optimization for speedy pickups.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="how container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Get a ride in four simple steps.</p>
+
+      <div class="timeline" id="timeline">
+        <!-- timeline steps with small animations -->
+        <div class="step">
+          <div class="step-icon">1</div>
+          <div class="step-body">
+            <h4>Request a ride</h4>
+            <p>Open the app, set pickup and destination — request instantly.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">2</div>
+          <div class="step-body">
+            <h4>Match with a driver</h4>
+            <p>Smart matching finds the nearest available driver.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">3</div>
+          <div class="step-body">
+            <h4>Track your trip</h4>
+            <p>Live tracking, share ETA with friends and family.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-icon">4</div>
+          <div class="step-body">
+            <h4>Arrive safely</h4>
+            <p>Complete trip and rate your driver — safety is our priority.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section id="download" class="download container">
+      <div class="download-grid">
+        <div class="download-left">
+          <h2 class="section-title">Download Déplace Toi</h2>
+          <p class="section-sub">Available on the App Store and Google Play. Fast & secure booking with a pink glow.</p>
+
+          <div class="store-buttons">
+            <a href="#" class="store-btn ios">
+              <!-- simple App Store mock -->
+              <svg class="store-icon" viewBox="0 0 24 24"><path d="M5 3h14v18H5z" fill="currentColor"/></svg>
+              <div>
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </div>
+            </a>
+
+            <a href="#" class="store-btn android">
+              <svg class="store-icon" viewBox="0 0 24 24"><path d="M5 3h14v18H5z" fill="currentColor"/></svg>
+              <div>
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="download-right" aria-hidden="true">
+          <!-- Floating phones for visual interest -->
+          <div class="float-phone p1"></div>
+          <div class="float-phone p2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <footer id="contact" class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <div class="brand footer-brand">Déplace<span>Toi</span></div>
+          <p class="muted">© <span id="year"></span> Déplace Toi. All rights reserved.</p>
+        </div>
+
+        <div class="footer-right">
+          <div class="socials">
+            <a href="#" class="social" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 5.9c-.6.3-1.2.5-1.8.6.7-.4 1.3-1.1 1.6-1.9-.7.4-1.5.7-2.4.9C18.2 4.6 17 4 15.8 4c-2 0-3.6 1.7-3.6 3.7 0 .3 0 .6.1.9-3-.2-5.8-1.6-7.6-3.8-.3.6-.4 1.2-.4 1.9 0 1.3.7 2.4 1.7 3-.6 0-1.2-.2-1.7-.5v.1c0 1.8 1.3 3.4 3 3.8-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3 2.3-1 .8-2.3 1.3-3.6 1.3H6c2.1 1.4 4.6 2.3 7.3 2.3 8.7 0 13.5-7.4 13.5-13.8V8c.9-.7 1.6-1.6 2.1-2.6-.8.3-1.7.5-2.6.6z"/></svg></a>
+            <a href="#" class="social" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z"/></svg></a>
+            <a href="#" class="social" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12.1C22 6.5 17.5 2 11.9 2S2 6.5 2 12.1c0 5 3.7 9.1 8.5 9.9v-7H8.1v-2.9h2.4V9.4c0-2.3 1.4-3.6 3.4-3.6.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.3v1.6h2.3l-.4 2.9h-1.9v7C18.3 21.2 22 17.1 22 12.1z"/></svg></a>
+          </div>
+
+          <div class="footer-links">
+            <a href="#" class="muted">Privacy Policy</a>
+            <a href="#" class="muted">Terms</a>
+            <a href="#contact" class="muted">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- decorative top gradient border -->
+      <div class="footer-top-border"></div>
+    </footer>
+  </main>
+
+  <!-- Link to external JS file -->
+  <script src="script.js"></script>
+</body>
+</html>
